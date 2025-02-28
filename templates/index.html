@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Image to Assamese Caption Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Assamese Image Caption Generator</h1>
+        
+        <div id="drop-zone" class="upload-section">
+            <p>Click or drag and drop an image here</p>
+            <input type="file" id="file-input" accept="image/*" style="display: none;">
+        </div>
+
+        <div id="preview-section" style="display: none;">
+            <img id="image-preview" alt="Preview">
+            <button id="generate-btn" class="btn">Generate Caption</button>
+        </div>
+
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating caption...</p>
+        </div>
+
+        <div id="result-section" style="display: none;">
+            <h2>Generated Caption:</h2>
+            <p id="caption-text"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
